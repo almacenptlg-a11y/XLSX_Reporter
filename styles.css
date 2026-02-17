@@ -365,21 +365,36 @@ table {
   font-size: 13px;
 }
 
+/* =========================================
+   MEJORA VISUAL ENCABEZADOS (HEADERS)
+   ========================================= */
+
+/* El contenedor de la celda */
 thead th {
+  background: var(--bg-card);
   position: sticky;
   top: 0;
-  background: var(--header-bg);
-  color: var(--text-muted);
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 0.5px;
-  padding: 0;
+  z-index: 20;
+  /* Borde derecho para separar columnas visualmente */
+  border-right: 1px solid var(--border);
   border-bottom: 2px solid var(--border);
-  text-align: left;
-  z-index: 10;
-  white-space: nowrap;
-  height: 48px;
+  padding: 0; /* Quitamos padding nativo para usar flex */
+  transition: background 0.1s;
+}
+
+/* Efecto Hover en toda la celda */
+thead th:hover {
+  background: var(--row-hover); /* Color gris suave */
+}
+
+.th-title:hover {
+  color: var(--primary); /* Resaltar texto al pasar mouse */
+}
+
+/* Al pasar el mouse por el header, el botón se hace visible */
+thead th:hover .btn-col-menu {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 tbody td {
@@ -428,7 +443,6 @@ tfoot td {
   display: flex;
   align-items: center;
   gap: 6px;
-  
 }
 
 .sort-icon {
@@ -463,6 +477,7 @@ tfoot td {
   background: var(--bg-body);
   color: var(--primary);
   border-color: var(--border);
+  transform: scale(1.1);
 }
 
 /* ACTIVE STATE: FUNNEL ICON */
@@ -792,7 +807,29 @@ tfoot td {
   letter-spacing: 0.5px;
 }
 
-/* Utilidad simple */
-.hidden {
-  display: none !important;
+/* =========================================
+   9. EDICIÓN DE CELDAS
+   ========================================= */
+.cell-editing {
+  padding: 0 !important; /* Quitar padding para que el input llene la celda */
+  background: #fff;
+}
+
+.table-input {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--primary);
+  border-radius: 0;
+  padding: 0 8px;
+  font-family: inherit;
+  font-size: 13px;
+  background: #fff;
+  color: var(--text-main);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* Ajustes para inputs numéricos */
+.table-input[type="number"] {
+  text-align: right;
 }
