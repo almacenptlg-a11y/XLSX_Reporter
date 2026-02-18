@@ -1632,14 +1632,14 @@ class DataViewerApp {
     this.autoSelectOption(this.els.mapLocalidad, [
       "localidad",
       "NOM_TIENDA",
-      "RS Comprador",
+      "Comprador",
       "LOCAL",
       "ciudad",
       "sede",
       "ubicacion"  
     ]);
     this.autoSelectOption(this.els.mapScanCode, [
-      "Cód. Empaque",
+      "Cód.",
       "UPC",
       "code",
       "codigo",
@@ -1814,4 +1814,5 @@ class DataViewerApp {
 }
 
 const app = new DataViewerApp();
+
 
