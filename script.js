@@ -1631,12 +1631,16 @@ class DataViewerApp {
     // Auto-selección inteligente
     this.autoSelectOption(this.els.mapLocalidad, [
       "localidad",
+      "NOM_TIENDA",
+      "RS Comprador",
+      "LOCAL",
       "ciudad",
       "sede",
-      "ubicacion"
+      "ubicacion"  
     ]);
     this.autoSelectOption(this.els.mapScanCode, [
-      "scan",
+      "Cód. Empaque",
+      "UPC",
       "code",
       "codigo",
       "ean",
@@ -1645,12 +1649,21 @@ class DataViewerApp {
     this.autoSelectOption(this.els.mapProducto, [
       "producto",
       "descripcion",
+      "Descripción",
+      "DESCRIPCION_LARGA",
+      "SKU_NAME",
       "item",
       "nombre"
     ]);
-    this.autoSelectOption(this.els.mapPedido, ["pedido", "cant", "solicitud"]);
+    this.autoSelectOption(this.els.mapPedido, [
+      "pedido", 
+      "UNIDADES",
+      "cant", 
+      "solicitud"
+    ]);
     this.autoSelectOption(this.els.mapOrdenCompra, [
       "orden",
+      "NUM_OC",
       "compra",
       "oc",
       "po",
@@ -1801,3 +1814,4 @@ class DataViewerApp {
 }
 
 const app = new DataViewerApp();
+
