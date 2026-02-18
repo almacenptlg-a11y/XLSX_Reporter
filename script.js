@@ -1634,6 +1634,7 @@ class DataViewerApp {
       "nom_tienda",
       "rs comprador",
       "local",
+      "cliente",
       "ciudad",
       "sede",
       "ubicacion"  
@@ -1815,6 +1816,7 @@ class DataViewerApp {
 }
 
 const app = new DataViewerApp();
+
 
 
 
