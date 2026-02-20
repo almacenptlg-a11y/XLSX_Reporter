@@ -1658,6 +1658,7 @@ class DataViewerApp {
       "nombre"
     ]);
     this.autoSelectOption(this.els.mapPedido, [
+      "empaques pedidos",
       "pedido", 
       "unidades",
       "cant", 
@@ -1816,6 +1817,7 @@ class DataViewerApp {
 }
 
 const app = new DataViewerApp();
+
 
 
 
